@@ -1,0 +1,47 @@
+#list of squirrel
+#
+
+<html>
+    <head>
+        Hello and Welcome!
+    </head>
+    <body>
+        <header class='header'>
+            <h1>Squirrel dataset</h1>
+        </header>
+
+
+        <main>
+
+        <p><a href="add/", class="button">Add another squirrel</a></p>
+
+        <table id='squirrels'>
+            <tr>
+                <th>Unique_Squirrel_ID</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Shift</th>
+                <th>Date</th>
+                <th>Age</th>
+            </tr>
+            {% for squ in squirrels %}
+            <tr>
+                <td><a href="{{squ.Unique_Squirrel_ID}}">{{squ.Unique_Squirrel_ID}}</a></td>
+                <td>{{squ.Latitude}}</td>
+                <td>{{squ.Longitude}}</td>
+                <td>{{squ.Shift}}</td>
+                <td>{{squ.Date}}</td>
+                <td>{{squ.Age}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
+
+      <footer>
+        <p>You have reached the end of the list</p>
+        <small> Thanks for visiting our website~</small>
+        </footer>
+
+
+    </body>
+</html>
